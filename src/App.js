@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+/* 
+ * Author: Tavner Murphy
+ * Date: 2/10/2024
+ * React Starter App - Bootstrapped with Create React App
+ * 
+ * Source: Facebook, Inc. (2024). React Starter App. Retrieved from https://react.dev
+ * 
+ * This project was initialized using Create React App.
+ * See documentation at https://create-react-app.dev
+*/
+
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginPage from './LoginPage';
+import CreateAccountPage from './CreateAccountPage';
+import ProfilePage from './ProfilePage';
+import ConcertsPage from './ConcertsPage';
+import ConcertIndividualPage from './ConcertIndividualPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/create-account" element={<CreateAccountPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/concerts" element={<ConcertsPage />} />
+        <Route path="/concert/:eventId" element={<ConcertIndividualPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

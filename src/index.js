@@ -1,8 +1,17 @@
+/* 
+ * Author: Tavner Murphy
+ * Date: 2/10/2024
+ * React Starter App - Bootstrapped with Create React App
+ * 
+ * Source: Facebook, Inc. (2024). React Starter App. Retrieved from https://react.dev
+ * 
+ * This project was initialized using Create React App.
+ * See documentation at https://create-react-app.dev
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +19,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
